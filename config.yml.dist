@@ -1,0 +1,3 @@
+calendars:
+  - name: Personal
+    uri:  https://www.google.com/calendar/ical/...

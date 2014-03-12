@@ -1,0 +1,19 @@
+/*
+ *= require bootstrap/dist/css/bootstrap
+ *= require bootstrap-datepicker/css/datepicker3
+ *= require fontawesome/scss/font-awesome
+ */
+
+input[data-role="datepicker"]  {
+  width: 200px;
+}
+
+#result {
+  font-size: 10em;
+  text-align: center;
+}
+
+.container .jumbotron {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

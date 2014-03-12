@@ -1,0 +1,19 @@
+<form id="when-form" class="form-inline jumbotron" action="/schedule" method="post">
+  <h1>Is Lewis Busy
+    <small> on
+      <%= params[:date] %>
+      <i class="fa fa-question form-control-feedback"></i>
+      <input id="change-day" type="button" class="btn btn-success" value="Change Day" data-loading-text="Change Day">
+    </small>
+  </h1>
+</form>
+
+<div id="result"></div>
+
+
+<% @events.each do |event| %>
+  <li class="alert alert-warning">
+    Busy: <%= event.dtstart.strftime '%H:%M' %> &mdash; <%= event.dtend.strftime '%H:%M' %>
+    <% if event.status %>(<%= event.status.downcase %>)<% end %>
+  </li>
+<% end %>

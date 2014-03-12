@@ -1,0 +1,9 @@
+{
+  "name": "amibusy",
+  "version": "0.1.0",
+  "dependencies": {
+    "bootstrap-datepicker": "~1.3.0",
+    "fontawesome": "~4.0.3"
+  },
+  "private": true
+}
