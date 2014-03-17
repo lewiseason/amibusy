@@ -11,6 +11,8 @@ gem 'sass'
 gem 'json'
 
 group :development do
+  gem 'rerun'
+
   gem 'rack-livereload'
   gem 'guard-livereload'
   gem 'byebug'

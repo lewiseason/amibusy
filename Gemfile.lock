@@ -59,6 +59,8 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
+    rerun (0.9.0)
+      listen (~> 2.7)
     sass (3.3.2)
     sinatra (1.4.4)
       rack (~> 1.4)
@@ -85,6 +87,7 @@ DEPENDENCIES
   icalendar
   json
   rack-livereload
+  rerun
   sass
   sinatra
   sprockets
