@@ -18,7 +18,7 @@ $ ->
       data:
         date: date
       complete: (event) ->
-        callback(event.responseJSON.busy isnt false)
+        callback(event.responseJSON.events.length isnt 0)
 
   $form.on 'submit', (event) ->
     unless event.isTrigger

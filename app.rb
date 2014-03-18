@@ -21,11 +21,12 @@ module Application
 
       date  = DateTime.parse(params[:date]).to_date
       range = [date.to_datetime, (date+1).to_datetime]
+      events = Application::State.events
+        .find_all { |event| Application::State.event_on_date(event, date, range) }
+        .map { |event| { 'start' => event.dtstart, 'end' => event.dtend } }
 
-      {
-        busy: !!Application::State.events.find do |event|
-          Application::State.event_on_date(event, date, range)
-        end
+      return {
+        events: events
       }.to_json
 
     end
@@ -34,10 +35,9 @@ module Application
       date = DateTime.parse(params[:date]).to_date
       range = [date.to_datetime, (date+1).to_datetime]
 
-      @events = Application::State.events.find_all do |event|
-        Application::State.event_on_date(event, date, range)
-      end
-      @events.sort_by(&:dtstart)
+      @events = Application::State.events
+        .find_all { |event| Application::State.event_on_date(event, date, range) }
+        .sort_by(&:dtstart)
 
       erb :schedule
     end
