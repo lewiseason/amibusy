@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'icalendar'
+gem 'ri_cal'
 gem 'chronic'
 
 gem 'sprockets'
