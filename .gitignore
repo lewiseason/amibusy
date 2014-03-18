@@ -1,3 +1,4 @@
 tmp/calendar-*
 vendor/assets/components/*
 config.yml
+.bundle

@@ -4,8 +4,14 @@ Bundler.require
 require 'sinatra'
 require 'yaml'
 
+$config = YAML.load_file('config.yml')
+
 module Application
   class Frontend < Sinatra::Base
+    before do
+      @name = $config['name']
+    end
+
     get '/' do
       erb :index
     end
@@ -40,7 +46,7 @@ module Application
     end
 
     def sync!
-      calendars = YAML.load_file('config.yml')['calendars']
+      calendars = $config['calendars']
       calendars.map! { |c| c['uri'] }
 
       calendars.each do |calendar|
