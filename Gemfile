@@ -10,10 +10,12 @@ gem 'sass'
 
 gem 'json'
 
-group :development do
-  gem 'rerun'
+gem 'capistrano'
 
-  gem 'rack-livereload'
-  gem 'guard-livereload'
-  gem 'byebug'
-end
+# group :development do
+#   gem 'rerun'
+
+#   gem 'rack-livereload'
+#   gem 'guard-livereload'
+#   gem 'byebug'
+# end

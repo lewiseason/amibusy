@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler'
 
-require 'rack-livereload'
+# require 'rack-livereload'
 
 require 'sprockets'
 
@@ -12,7 +12,7 @@ require './app'
 
 Bundler.require
 
-use Rack::LiveReload
+# use Rack::LiveReload
 
 map '/assets' do
   env = Sprockets::Environment.new
